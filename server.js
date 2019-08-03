@@ -14,7 +14,7 @@ app.post('/:name', (req, res) => {
   const name = req.params.name
   dbModule.insertData(name)
   res.
-    status(200).
+    status(201).
     send({ message: `${name} is successfully insert into Database` })
 })
 
