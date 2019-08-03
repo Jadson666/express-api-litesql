@@ -1,7 +1,6 @@
 const sqlite3 = require('sqlite3').verbose()
 const TABLE_NAME = 'CUSTOMER_DATA'
 
-
 const createTable = () => {
   const db = new sqlite3.Database('./lite.db')
 
@@ -62,7 +61,6 @@ const updateDate = (name1, name2) => {
 
   db.close()
 }
-
 
 module.exports = {
   createTable,

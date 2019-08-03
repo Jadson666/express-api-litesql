@@ -11,8 +11,11 @@ app.get('/', (req, res) => {
 })
 
 app.post('/:name', (req, res) => {
-  dbModule.insertData(req.params.name)
-  res.status(200).send({ message: 'success' })
+  const name = req.params.name
+  dbModule.insertData(name)
+  res.
+    status(200).
+    send({ message: `${name} is successfully insert into Database` })
 })
 
 app.put('/:name/:name2', (req, res) => {
