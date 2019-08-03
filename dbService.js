@@ -26,13 +26,8 @@ const insertData = (name) => {
 const getAllData = (callback) => {
   const db = new sqlite3.Database('./lite.db')
 
-  let result = []
-
   db.all(`SELECT name FROM ${TABLE_NAME}`, (err, row) => {
-    row.forEach(({ name }) => {
-      result.push({ name })
-    })
-    callback(result)
+    callback(row)
   })
 
   db.close()
