@@ -1,5 +1,5 @@
 {
-  "name": "express_api",
+  "name": "express-api-litesql",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
